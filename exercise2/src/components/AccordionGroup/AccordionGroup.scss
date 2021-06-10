@@ -1,0 +1,10 @@
+@import '../../scss/variable';
+
+.accordion__group {
+	border-top: 2px solid $yellow;
+	background-color: white;
+	@media only screen and (min-width: 576px) {
+		border: none;
+		box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+	}
+}

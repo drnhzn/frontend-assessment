@@ -1,0 +1,16 @@
+.card {
+	padding: 20px;
+	box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.09);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	.card__image {
+		margin-bottom: 20px;
+	}
+	.card__text {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.card__button {
+		width: 200px;
+		margin: 0 auto;
+	}
+}

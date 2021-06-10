@@ -1,0 +1,44 @@
+@import './scss/fonts';
+@import './scss/variable';
+
+body {
+	font-family: $primary-font;
+	color: #f5f6ea;
+}
+
+.container {
+	padding: 0 10px;
+	padding-top: 40px;
+	@media only screen and (min-width: 576px) {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+}
+
+.accordion__nav {
+	ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		margin: 0;
+	}
+
+	.nav__link {
+		display: none;
+		padding: 20px 40px;
+		flex-grow: 1;
+		text-align: center;
+		@media only screen and (min-width: 576px) {
+			display: block;
+
+			background-color: #1e1d1d;
+		}
+
+		&.__active {
+			font-weight: bold;
+			background-color: $yellow;
+			color: black;
+			border-bottom: 2px solid black;
+		}
+	}
+}

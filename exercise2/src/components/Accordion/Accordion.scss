@@ -1,0 +1,74 @@
+@import '../../scss/variable';
+
+.accordion {
+	.accordion__head {
+		background-color: #1e1d1d;
+		padding: 5px 10px;
+		color: $yellow;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h1 {
+			margin: 0;
+			font-weight: 600;
+			font-size: 24px;
+		}
+		@media only screen and (min-width: 576px) {
+			display: none;
+		}
+	}
+	.accordion__body {
+		display: none;
+		max-height: 0;
+		overflow: hidden;
+		color: black;
+		padding: 10px;
+		@media only screen and (min-width: 576px) {
+			border: 2px solid black;
+			border-top: none;
+		}
+	}
+
+	&.__active {
+		.accordion__head {
+			background-color: $yellow;
+			color: black;
+			border-bottom: 2px solid black;
+		}
+		.accordion__body {
+			display: block;
+			animation: showAccordion 1s ease-in-out;
+			animation-fill-mode: both;
+		}
+	}
+
+	@media only screen and (min-width: 576px) {
+		&.__active {
+			.accordion__head {
+				background-color: $yellow;
+				color: black;
+				border-bottom: 2px solid black;
+			}
+			.accordion__body {
+				display: block;
+				animation-name: none;
+				max-height: 300px;
+			}
+		}
+	}
+}
+
+@keyframes showAccordion {
+	0% {
+		display: none;
+		max-height: 0;
+	}
+	1% {
+		display: block;
+		max-height: 0;
+	}
+	100% {
+		display: block;
+		max-height: 300px;
+	}
+}
